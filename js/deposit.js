@@ -1,5 +1,17 @@
-let newDepositAmount = getInputValues('btn-deposit');
+document.getElementById('btn-deposit').addEventListener('click', function () {
+    let newDepositAmount = getInputValues('deposit-amount');
 
-let previousDepositAmount = getElementText('deposit-data');
-let currentdepositTotal = newDepositAmount + previousDepositAmount;
-getReplacedElement('deposit-data', currentdepositTotal);
+
+    let previousDepositAmount = getElementText('deposit-data');
+
+
+    const newDepositTotal = previousDepositAmount + newDepositAmount;
+    setTextElementValueById('deposit-data', newDepositTotal);
+
+    let previousbalance = getElementText('balance-data');
+    let newBalance = previousbalance + newDepositAmount;
+    setTextElementValueById('balance-data', newBalance);
+
+})
+
+

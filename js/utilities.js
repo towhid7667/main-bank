@@ -15,7 +15,7 @@ function getElementText(elementId) {
     return elementValue;
 }
 
-function getReplacedElement(replaceItem, newItem) {
-    let replacedElement = document.getElementById(replaceItem);
-    replacedElement.innerText = newItem;
+function setTextElementValueById(elementId, newValue) {
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = newValue;
 }
